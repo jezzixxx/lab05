@@ -20,7 +20,7 @@ TEST(Transaction, Banking){
 	ASSERT_EQ(test_transaction.Make(user0, user1, 1000), true);
 	ASSERT_EQ(user1.GetBalance(), num1+1000);	
 	ASSERT_EQ(user0.GetBalance(), num0-1000-num_fee);
-	ASSERT_EQ(test_transaction.Make(user0, user1, 4000), false);
+	ASSERT_EQ(test_transaction.Make(user0, user1, 3900), false);
 	ASSERT_EQ(user1.GetBalance(), num1+1000);	
 	ASSERT_EQ(user0.GetBalance(), num0-1000-num_fee);
 }
