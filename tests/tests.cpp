@@ -8,7 +8,7 @@ TEST(Transaction, Banking){
 	Transaction test_transaction;
 	ASSERT_EQ(test_transaction.fee(), 1);
 	test_transaction.set_fee(num_fee);
-	ASSERT_EQ(test_tran.fee(), base_fee);
+	ASSERT_EQ(test_transaction.fee(), num_fee);
 	ASSERT_THROW(test_transaction.Make(user0, user0, 1000), std::logic_error);
 	ASSERT_THROW(test_transaction.Make(user0, user1, -50), std::invalid_argument);
 	ASSERT_THROW(test_transaction.Make(user0, user1, 50), std::logic_error);
